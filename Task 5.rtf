@@ -1,0 +1,56 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww30040\viewh18900\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 CREATE TABLE flood_control_projects\
+(\
+	id bigserial,\
+	project_name varchar(50),\
+	location varchar(50),\
+	region varchar(50),\
+	implementing_agency varchar(50),\
+	budget_amount numeric,\
+	funding varchar(50),\
+	start_date varchar(50),\
+	end_date varchar(50),\
+	current_status varchar(50),\
+	remarks varchar(50)\
+\
+);\
+\
+INSERT INTO flood_control_projects(project_name, location, region, implementing_agency, budget_amount, funding, start_date, end_date, current_status, remarks)\
+VALUES\
+	('Construction of Revetment', 'Bulacan', 'III', 'DPWH', 72374906.25, 'GAA' ,'2024', '2024', 'Completed', 'Ghost Project'),\
+	('Construction of Flood Control Structure', 'Quezon City', 'NCR', 'DPWH', 48508612.63, 'GAA' ,'2024', '2024', 'Completed', 'Worsening Flooding'),\
+	('Rehabilitation of Eroded Pampanga River Bank', 'Pampanga', 'III', 'DPWH', 91841987.52, 'GAA' ,'2024', '2024', 'Completed', 'Structural Collapse'),\
+	('Construction of Riverbank Protection Structure', 'Bulacan', 'III', 'DPWH', 77199192.34, 'GAA' ,'2024', '2024', 'Completed', 'Ghost Project'),\
+	('Arayat Riverbank Project', 'Pampanga', 'III', 'DPWH', 254000000, 'GAA', '2020', '2024', 'Completed', 'Collapsed'),\
+	('Lourdes River Dike', 'Tarlac', 'III', 'DPWH', 47000000, 'GAA', '2022', '2024', 'Completed', 'Collapsed'),\
+	('Central Luzon\'96Pampanga River Floodway', 'Central Luzon', 'III', 'DPWH', 500000000000, 'GAA',  '2024', '', 'Ongoing', 'Delayed'),\
+	('Unfinished Marikina River Dike (Vista Real gap', 'Marikina', 'NCR', 'DPWH', 28000000000, 'GAA', '2018', '2024', 'Suspended', 'Caused Flooding'),\
+	('Candating Riverbank Rehabilitation', 'Pampanga', 'III', 'DPWH', 393000000, 'GAA', '2016', '2025', 'Ongoing', 'Multiple Repairs'),\
+	('Laguna Lakeshore Expressway Dike (PPP)', 'Laguna', 'IV-A', 'DPWH', 123000000000, 'GAA', '2015', '2021', 'Suspended', 'Environmental issues');\
+	\
+	\
+	\
+\
+\
+select * from flood_control_projects\
+WHERE region = 'III'\
+\
+select * from flood_control_projects\
+WHERE location = 'Marikina'\
+\
+select * from flood_control_projects\
+WHERE current_status = 'Ongoing'\
+\
+select * from flood_control_projects\
+WHERE budget_amount > 100000000\
+\
+select * from flood_control_projects\
+ORDER BY budget_amount asc;\
+\
+}
